@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+html{
+	/*overflow-y:scroll;*/
+	background:#fff;
+	-webkit-text-size-adjust:none
+}
+
+
+/* basic  start */
+@font-face {
+  font-family:'Helvetica_Neue';
+  src:url(../font/Helvetica_Neue.ttf);
+} 
+@font-face {
+  font-family:'HelveticaNeue_thin';
+  src:url(../font/HelveticaNeueLTStd-Th_5.ttf);
+} 
+@font-face {
+  font-family:'HelveticaNeue_bold';
+  src:url(../font/HelveticaNeueLTStd-65.ttf);
+} 
+@font-face {
+  font-family:'Didot';
+  src:url(../font/Didot-HTF-M24-Medium.ttf);
+} 
+html,body{ overflow-y: hidden;margin: 0; padding: 0; -webkit-text-size-adjust:none; -webkit-overflow-scrolling: touch;}
+body{ font: 12px/150% "Helvetica_Neue","Tahoma", "MicroYahei"; color:#333; background-color: #fff;  }
+
+/*body {
+　　　　font: normal 100% Helvetica, Arial, sans-serif;
+　　}*/
+div,span,ul,li,dl,dd,dt,form,p,h1,h2,h3,h4,h5,h6,h7,input,select,pre,legend,textarea{ padding:0; margin:0; list-style:none;  vertical-align: top; outline:none;font-family:'Helvetica_Neue'; }
+input{ vertical-align:middle}
+a { text-decoration:none; color:#009ae7; outline: none;}
+a:hover { color:#007fbf;}
+a img{ border:none; }
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+width: 6px;
+height: 6px;
+background-color: #c1c1c1;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{ 
+border-radius: 0;
+background-color: #fff;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+border-radius: 6px; 
+background-color: #c1c1c1;
+}
+/* basic  end */
+
+
+/* page start */
+.container { height: auto; overflow: hidden; }
+header { position: relative;  background: #fff; box-shadow: 0 4px 7px rgba(0,0,0,0.1); line-height: 85px; vertical-align: middle;  z-index: 1; }
+.mainCon { overflow-y: auto; }
+.mainCon_1{overflow-y: auto;
+height: 310px;
+width: 100%;}
+.addressText { float: left; margin-left: 0.6em; }
+.infoBox { float: right; position: relative; width: 30px; height: 30px; margin: 31px 29px 0 10px; background: url(../images/icons.png) 0 0 no-repeat; background-size: 777%;}
+.infoBox > em { position: absolute; right: -10px; top: -14px; display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: #f55d3f; overflow: hidden; font-size: 18px; color: #fff; text-align: center; line-height: 24px; font-style: normal; }
+.searchBox { position:relative; height: 5.5em; border-bottom: 1px solid #e4e8eb; background: #edf1f4;  line-height: 5.5em; vertical-align: middle;   }
+.searcbBoxInner { position: absolute; left:0; top:0; width: 100%; height: 100%; z-index:0; }
+.searchInput { position: absolute; top: 0.5em; left: 50%; display: inline-block; width: 90%; height: 0.9em; margin-left: -45%; border-radius: 41px; border: 1px solid #e4e8eb; background: #fff; text-align: center; font-size: 36px;color: #52585c; }
+.searchHolder { position: relative; display: inline-block; font-size: 1.3em; color: #c9d0d6; z-index:1; }
+.tabBox { height: 50px; line-height: 50px; border-bottom: 1px solid #d6dce1; vertical-align: middle; text-align: center; font-size: 0; }
+.tabBox > div { display: inline-block; width: 45%; height: 1em; border: 1px solid #3b9df0; border-radius: 8px; line-height: 23px; vertical-align: middle; font-size: 23px; color: #70787e;  }
+.tabBox > div:first-child { border-bottom-right-radius: 0; border-top-right-radius: 0;  }
+.tabBox > div:last-child { border-bottom-left-radius: 0; border-top-left-radius: 0;  }
+.tabBox > div.on { background: #3b9df0; color: #fff; }
+.busList { margin: 10px 40px 0; }
+.busList > li { height: 100px; border-bottom: 1px solid #d6dce1; font-size: 0; }
+.busList > li > div { line-height: 100px; }
+.busList > li p { line-height: 28px; }
+.busStatus { display: inline-block;
+width: 15px;
+height: 38px;
+background: transparent url("../images/icons.png") no-repeat scroll -70px 0px;
+vertical-align: middle;
+background-size: 1050%;}
+.busStatus.on { background-position: -209px 0; }
+
+.busStatus1 { display: inline-block;
+width: 15px;
+height: 38px;
+background: transparent url("../images/icons1.png") no-repeat scroll -50px 0px;
+vertical-align: middle;
+background-size: 1337%;}
+.busStatus1.on { background-position: -185px 27px }
+
+.mask { display:none; position: fixed; left:0; top:0; width:100%; height: 100%; background: rgba(0,0,0,0.2); overflow: hidden; z-index: 9999; }
+.popWin { display:none; position: fixed; left: 50%; top: 70%; width: 80%; margin-left: -40%; margin-top: -230px; background: #fff; border-radius: 20px; overflow: hidden; z-index: 10000; }
+.popWinInner { padding: 2em; }
+.popWinBtnGrp { height: 54px; border-top: 1px solid #c5c5c5; font-size: 0; line-height: 54px; }
+.popWinBtnGrp > div { display: inline-block; width: 47.8%; height: 100%; border-left: 1px solid #c5c5c5; text-align: center; color: #009ae7; font-size: 13px; }
+.alertTitle { margin-bottom: 1.3em; line-height: 1.3em; font-size: 1.3em; color: #52585c; text-align: center; font-weight: normal; }
+.alertPara { line-height: 1.3em;  font-size: 1.2em; color: #70787e; }
+.headerBack { float: left; margin: 31px 0 0 40px; }
+.detailInfo { padding: 0.6em 1.2em 0px;line-height: 2em;}
+.favorite { display: inline-block; vertical-align: middle; font-size:14px; color: #3b9df0; text-align: center; }
+.stationInfo { height: 35px; padding: 0 0px; background: #4b9fe6; color: #fff; font-size: 20px; line-height: 35px; white-space: nowrap; }
+.stationInfo > p > span { line-height: 35px; }
+.otherBusInfo { height: 70px; border-bottom: 1px solid #d6dce1; font-size:0; }
+.otherBusInfo > div { height: 100%; border-left: 1px solid #d6dce1; text-align: center; line-height: 28px; }
+.otherBusInfo > div:first-child { border-left: none; }
+.stationList { margin:0px 0px 0px 0px; }
+.stationList > li { position: relative; height: 40px; line-height: 40px; }
+.stationLine { position: absolute; left: 83px; top: 0; width: 4px; height: 100%; background: #d6dce1; z-index:0; }
+.busIcon { display: inline-block;
+width: 20px;
+height: 25px;
+margin: 0px 15px 0px 25px;
+vertical-align: middle; }
+
+.busIconName{ 
+display: inline-block;
+width: 50px;
+height: 25px;
+margin-right: 3px;
+margin-top: -22px;
+margin-left: -49px;
+vertical-align: middle;
+font-size: 10px;}
+
+.busIconNameOne{ 
+  color: #3B9DF0;
+display: inline-block;
+width: 50px;
+height: 25px;
+margin-right: 3px;
+margin-top: -44px;
+margin-left: -49px;
+vertical-align: middle;
+font-size: 10px;}
+
+
+.busIconNameTwo{ 
+display: inline-block;
+width: 50px;
+height: 25px;
+margin-right: 3px;
+margin-top: -22px;
+margin-left: -53px;
+vertical-align: middle;
+font-size: 10px;}
+.stationNum { display: inline-block; width: 12px; margin-right: 0px; font-size: 12px; color: #97a2aa; }
+.stationText { font-size: 15px; color: #70787e;}
+.point { position: relative; display: inline-block; width: 12px; height:12px; margin-right: 3px; border-radius: 50%; background: #d6dce1; overflow: hidden; vertical-align: middle; z-index: 1; }
+.stationList > li.current .busIcon { background:url(../images/icons.png) -125px 0 no-repeat; background-size: 900%;}
+.stationList > li.passed_c .point { background: #3b9df0; }
+.stationList > li.current .point {background: #5ecc49; }
+.stationList > li.passed_c .stationText { color: #3b9df0; }
+.stationList > li.current .stationText { color: #aab4bc;}
+.stationList > li.passed_c .stationLine { background: url(../images/stationLine.png) 0 0 no-repeat; }
+.stationList > li.current .stationLine { background: #5ecc49; }
+.stationList > li.passed .busIcon { background: none; }
+.stationList > li.passed .point { background: #5ecc49; }
+.stationList > li.passed .stationText { color: #aab4bc; }
+.stationList > li.passed .stationLine { background: #5ecc49; }
+
+
+.stationList > li:last-child .stationLine { height: 50%; }
+.stationList > li:last-child.current .stationLine { background: #5ecc49; }
+.stationList > li:first-child .stationLine { top: 50%; height: 50%; }
+.stationList > li:first-child.current .stationLine { background: #5ecc49; }
+/* page end */
+
+/* common start */
+.i_downArrow , .i_search , .i_bus, .i_back, .i_favorite { display: inline-block; width: 23px; height: 23px; background:url(../images/icons.png) -26px 0 no-repeat; overflow: hidden; vertical-align: middle; background-size: 900%;}
+.i_search { background-position: -50px 2px; }
+.i_bus { width: 20px;
+height: 42px;
+margin: -2px 5px 0px 0px;
+background-position: -62px 13px;}
+.i_back {  width: 15px;
+height: 50px;
+cursor: pointer;
+background-position: -97px 0px;
+background: transparent url("../images/icons.png") no-repeat scroll -130px 0px / 1400% auto;}
+.i_favorite { width: 30px; height: 30px; background: transparent url("../images/icons.png") no-repeat scroll -218px 0px / 900% auto;}
+.inline { display: inline-block; }
+.fl{ float:left;}
+.fr{ float:right;}
+.mgt50 { margin-top: 50px; }
+.mgl40 { margin-left: 40px; }
+.mgl15 { margin-left: 15px; }
+.mgb10 { margin-bottom: 10px; }
+.mgb15 { margin-bottom: 15px;}
+.mgb20 { margin-bottom: 20px; }
+.lineH22 { line-height: 22px; }
+.tr{ text-align:right;}
+.tc{ text-align:center;}
+.ftb{ font-weight:bold; }
+
+.ft10 { font-size: 10px;}
+.ft11 { font-size: 10px;}
+.ft12 { font-size: 12px;}
+.ft15 { font-size: 15px;}
+.ft18 { font-size: 18px;}
+.ft24 { font-size: 24px;}
+.ft30 { font-size: 30px; }
+.ft36 { font-size: 1.6em; }
+.ft48 { font-size: 1.8em; }
+.c0  , .c0 > a , .c0 > a:hover { color: #52585c; }
+.c1 { color: #70787e; }
+.c2 { color: #acb4ba; }
+.c3 { color: #f55d3f; }
+.c4 { color: #3b9df0; }
+.oHidden { overflow: hidden; }
+.clearfix { overflow: auto; zoom: 1;}
+/* common end */

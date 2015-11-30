@@ -1,0 +1,879 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<title>Happy Bus</title>
+<link rel="stylesheet" type="text/css" href="resources/theme/default/css/stylecss.css">
+</head>
+<body>
+
+<div id="message_div" class="container" style="display: none;">
+<header class="tc">
+<span id="addressText" class="addressText ft36 c1">Xi'an <em class="i_downArrow"></em></span>
+<span id="headerText" class="ft48 c0">Happy Bus</span>
+<div class="infoBox" id="infoBox3"><em id="infoBoxPointMessage" style="display:none">1</em></div>
+</header>
+
+<div class="mainCon" style="height: 1775px;">
+<article class="searchBox">
+<div class="pageBack i_back" style="margin-top: 21px; margin-left: 13px;" id="pageBack2"></div>
+<p class="ft48 c5 tc" style="margin-top: -20px; font-size: 15px;">My Message</p>
+</article>
+
+<article>
+<ul class="busList infoList">
+<li>
+<div class="inline" style="width: 10%;">
+<div class="busStatus1 on"></div>
+</div>
+
+<div class="inline" style="width: 90%;">
+<p class="mgb15  ft48 c0">TRAFFIC NOTICE<span class="fr ft10 c2" style="margin-top: 15px;"><em class="mgr20 i_time"></em>2015-09-11 06:15</span></p>
+<p class="mgb50 ft11 c1" style="line-height: 16px;" id="error_message">受暴雨天气影响，预计您经常乘坐的东门-西工大软件园的<a href="#none">29路</a>公交线路段会出现拥堵，建议比平常时间（8:00~8:10)提前20分钟出发</p>
+</div>
+
+</li>
+
+<!-- <li>
+<div class="inline" style="width: 10%;">
+<div class="busStatus on"></div>
+</div>
+
+<div class="inline" style="width: 90%;">
+<p class="mgb20 mgt50 ft48 c0">Bus will be coming<span class="fr ft24 c2"><em class="mgr20 i_time"></em>2015-09-10 08:15</span></p>
+<p class="mgb50 ft30 c1"><a href="#none">327 Line which the license plate of bus is BDX888</a>,could be coming in 3 minutes. Please get ready to get on the bus.</p>
+</div>
+
+</li>
+
+<li>
+<div class="inline" style="width: 10%;">
+<div class="busStatus on"></div>
+</div>
+
+<div class="inline" style="width: 90%;">
+<p class="mgb20 mgt50 ft48 c0">Be about to arrive at Meilin Station<span class="fr ft24 c2"><em class="mgr20 i_time"></em>2015-09-08 08:15</span></p>
+<p class="mgb50 ft30 c1">Bus is about to arrive at Merlin station, please get ready to get off.</p>
+</div>
+
+</li>
+
+<li>
+<div class="inline" style="width: 10%;">
+<div class="busStatus on"></div>
+</div>
+
+<div class="inline" style="width: 90%;">
+<p class="mgb20 mgt50 ft48 c6">AFFIC NOTICE<span class="fr ft24 c2"><em class="mgr20 i_time"></em>2015-09-07 07:06</span></p>
+<p class="mgb50 ft30 c6">Typhoon “Haluo La” will land in 8 o’clock this morning. <a href="#none">327 Line (From Meilin to Shekou)</a> would be congested.Please 30 minutes in advance to catch the bus.</p>
+</div>
+
+</li> -->
+
+
+</ul>
+
+</article>
+</div>
+</div>
+<div id="detail_div" class="container" style="display: none;">
+    <header class="tc">
+     <span class="headerBack i_back" id="pageBack"></span>
+        <span id="headerText" class="ft48 c0" id="line_num">29</span>
+        <div class="infoBox" id="infoBox1"><em id="infoBoxPointDetail" style="display:none">1</em></div>
+    </header>
+    
+    <div class="mainCon"  style=";">
+        <article class="searchBox">
+         <div class="detailInfo">
+             <div class="inline" style=" width: 80%;">
+              <p class="ft10 c0">TO  -  西安软件园 站 </p>
+                    <p class="ft12 c1">首播班车 06: 00-23: 00 , 票价8元</p>
+                </div>
+                <div class="fr">
+              <div class="favorite">
+                     <em class="i_favorite"></em>
+                        <p>Favorite</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        <article class="stationInfo" >
+            <p><span class="ft15 mgl15">站点 :</span> 朱雀门</p>
+        </article>
+        
+        <article class="otherBusInfo" style="float:left;width: 100%;" >
+            <div class="inline" style="width: 33%;">
+             <p id="car_num_0" class="mgb15  ft12 c1">陕A012AB</p>
+                <p id="car_num_0_coming" class="ft12 c3" style="display:none">即将到站</p>
+                <p id="car_num_0_remain" class="ft12 c1"><span id="car_num_0_station_num" class="ft36 c4 lineH22">1</span> 站 <span id="car_num_0_min" class="ft36 c4 lineH22">3</span> 分钟</p>
+            </div>
+            <div class="inline" style="width: 33%;">
+             <p id="car_num_1" class="mgb15  ft12 c1">陕A012FB</p>
+                <p class="ft12 c1"><span id="car_num_1_station_num" class="ft36 c4 lineH22">1</span> 站 <span id="car_num_1_min" class="ft36 c4 lineH22">3</span> 分钟</p>
+            </div>
+            <div class="inline" style="width: 33%;float:clear">
+             <p id="car_num_2" class="mgb15  ft12 c1">陕A012SB</p>
+                <p class="ft12 c1"><span id="car_num_2_station_num" class="ft36 c4 lineH22">1</span> 站 <span id="car_num_2_min" class="ft36 c4 lineH22">3</span> 分钟</p>
+            </div> 
+        </article>
+        <div class="mainCon_1" id="mainConBig" style=";">
+        <ul id="stationList_my" style="height:230px" class="stationList"></ul>
+        </div>
+         <!-- <li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">18</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">17</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">16</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">15</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="current"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">14</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">13</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">12</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">11</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">10</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">9</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">8</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">7</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">6</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">5</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">4</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">3</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">2</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+            <li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">1</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>
+        </ul>  -->     
+        
+    </div>
+</div>
+<div id="lines_div"class="container">
+<header class="tc">
+     <span id="addressText" class="addressText ft36 c1">Xi'an <em class="i_downArrow"></em></span>
+        <span id="headerText" class="ft48 c0">Happy Bus</span>
+        <div class="infoBox"  id="infoBox"><em id="infoBoxPoint" style="display:none">1</em></div>
+    </header>
+    
+    <div class="mainCon" style=";">
+        <article class="searchBox tc">
+         <div class="searcbBoxInner">
+             <input type="text" value = "" class="searchInput" id="searchInput" />
+            </div>
+            <p class="searchHolder" id="searchHolder"><em class="i_search"></em>Please enter the site name or line</p>
+        </article>
+        
+        <article class="tabBox" id="tabBox">
+            <div class="on">Favorite</div>
+            <div>Nearby</div>
+        </article>
+        
+        
+        <article id="busListBox">
+            <ul id="busListBoxFav" class="busList">
+<!--                 <li>
+                    <div class="inline" style="width: 50%;">
+                        <p class=" ft24 c0"><a id="search_dk_button" href="./detail.html">328</a></p>
+                        <p class="ft18 c1">东门</p>
+                        <p class="ft15 c2">To  西安软件园 站</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="ft12 c1"><em class="i_bus"></em>陕A012AB</p>
+                        <p class="ft15 mgl15 c3">Come Soon</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li> -->
+                
+<!--                 <li>
+                    <div class="inline" style="width: 50%;">
+                        <p class="mgb20 mgt50 ft48 c0"><a href="#none">393</a></p>
+                        <p class="ft30 c1">Windmill Row (KP)</p>
+                        <p class="ft24 c2">To  Kennington Park Post Office</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="mgb10 mgt50 ft36 c1"><em class="i_bus"></em>HT6548</p>
+                        <p class="ft24 c1"><span class="ft36 c4 lineH22">1</span> Station <span class="ft36 c4 lineH22">3</span> Min</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus on"></div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="inline" style="width: 50%;">
+                        <p class="mgb20 mgt50 ft48 c0"><a href="#none">E65</a></p>
+                        <p class="ft30 c1">WestBound via Sheppard </p>
+                        <p class="ft24 c2">To  Sheppard-Yonge Station</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="mgb10 mgt50 ft36 c1"><em class="i_bus"></em>LG3564</p>
+                        <p class="ft24 c1"><span class="ft36 c4 lineH22">3</span> Station <span class="ft36 c4 lineH22">7</span> Min</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="inline" style="width: 50%;">
+                        <p class="mgb20 mgt50 ft48 c0"><a href="#none">824</a></p>
+                        <p class="ft30 c1">Windmill Row (KP)</p>
+                        <p class="ft24 c2">To  Kennington Park Post Office</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="mgb10 mgt50 ft36 c1"><em class="i_bus"></em>AE5962</p>
+                        <p class="ft24 c1"><span class="ft36 c4 lineH22">8</span> Station <span class="ft36 c4 lineH22">24</span> Min</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li> -->
+            </ul>
+            
+            
+            <ul class="busList" style="display: none;">
+                <li>
+                    <div class="inline" style="width: 50%;margin-left: -22px;">
+                        <p class=" ft24 c0"><a href="detail.html">29</a></p>
+                        <p class="ft18 c1">东门</p>
+                        <p class="ft15 c2">To  西安软件园 站</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="ft12 c1"><em class="i_bus"></em>陕A012AB</p>
+                        <p class="ft15 mgl15 c3">Come Soon</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li>
+                
+                               <li>
+                    <div class="inline" style="width: 50%;margin-left: -22px;">
+                        <p class=" ft24 c0"><a href="detail.html">29</a></p>
+                        <p class="ft18 c1">东门</p>
+                        <p class="ft15 c2">To  西安软件园 站</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="ft12 c1"><em class="i_bus"></em>陕A012AB</p>
+                        <p class="ft15 mgl15 c3">Come Soon</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li>
+                
+                 <li>
+                    <div class="inline" style="width: 50%;margin-left: -22px;">
+                        <p class=" ft24 c0"><a href="detail.html">29</a></p>
+                        <p class="ft18 c1">东门</p>
+                        <p class="ft15 c2">To  西安软件园 站</p>
+                    </div>
+                    
+                    <div class="inline" style="width: 40%;">
+                        <p class="ft12 c1"><em class="i_bus"></em>陕A012AB</p>
+                        <p class="ft15 mgl15 c3">Come Soon</p>
+                    </div>
+                    
+                    <div class="inline tr" style="width: 10%;">
+                        <div class="busStatus"></div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </div>
+</div>
+<div class="mask" id="alertMask"></div>
+<div class="popWin" id="alertPop">
+<div class="popWinInner">
+     <h1 class="alertTitle">交通预警</h1>
+        <p class="alertPara">受雷暴天气影响，预计您经常乘坐的东门-西工大软件园的<span class="c4">328</span>路公交线路段会出现拥堵，建议比平常时间（8:10~8:30)提前30分钟出发。</p>
+    </div>
+    <div class="popWinBtnGrp">
+     <div id="nextBtn">Next</div>
+        <div id="sureBtn">OK</div>
+    </div>
+</div>
+</body> 
+<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+<!-- <script type="text/javascript" src="js/mian.js" ></script>
+<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>  -->
+
+<script>
+    var num = 0;
+    function hello(){
+        console.log(num);
+        num = num +1;
+    }
+    var t_timer;
+    var t_timer_m;
+
+// 0 no car
+// 1 one car in station
+// 2 one car in middle station
+function hasCar(id,data){
+
+    for (var i = data.length - 1; i >= 0; i--) {
+        if(data[i].PositionId == id){
+
+            for (var j = data.length - 1; j >= 0; j--) {
+                if(data[j].PositionId.substring(0,data[j].PositionId.indexOf("_")) == id){
+
+                    return 3;
+                }
+
+            }
+
+
+            return 1;
+        }
+
+        if(data[i].PositionId.indexOf("_")>0){
+
+            if(data[i].PositionId.substring(0,data[i].PositionId.indexOf("_")) == id){
+                return 2;
+            }
+
+        }
+    };
+    return 0;
+} 
+
+// 0 no car
+// 1 one car in station
+// 2 one car in middle station
+function hasCarDeviceName(id,data){
+
+    for (var i = data.length - 1; i >= 0; i--) {
+        if(data[i].PositionId == id){
+
+            for (var j = data.length - 1; j >= 0; j--) {
+                if(data[j].PositionId.substring(0,data[j].PositionId.indexOf("_")) == id){
+
+                    return data[i].DeviceName+"_"+data[j].DeviceName;
+                }
+
+            }
+
+            return data[i].DeviceName;
+        }
+
+        if(data[i].PositionId.indexOf("_")>0){
+
+            if(data[i].PositionId.substring(0,data[i].PositionId.indexOf("_")) == id){
+                return data[i].DeviceName;;
+            }
+
+        }
+    };
+    return 0;
+}   
+
+var g_m_NUM = 0;  
+
+function get_message_loop(){
+
+        
+
+
+        var aj3 = $.ajax( {    
+            url:'http://testiot-sq53mjrtju.elasticbeanstalk.com/rest/message/'+g_m_NUM,    
+            type:'GET', 
+            dataType:'json', 
+            contentType: "application/json; charset=utf-8",    
+            success:function(data) { 
+
+                if(data.data.length == 0){
+
+                }else{
+                    document.getElementById("infoBoxPoint").style.display="block";
+                document.getElementById("infoBoxPointDetail").style.display="block";
+                document.getElementById("infoBoxPointMessage").style.display="block";
+
+
+                $("#error_message").text(data.data[0][g_m_NUM+1]);
+
+                
+
+                }
+
+             },    
+             error : function() {    
+                  // view("异常！");    
+                  alert("异常！");    
+             }    
+        });    
+
+
+}
+
+// get_message_loop();
+
+function get_detail_data(){
+        //console.log(num);
+        //alert(num);
+        num = num +1;
+
+        var PID = 17;
+        var LN  = 29;
+
+        var aj3 = $.ajax( {    
+            url:'http://testiot-sq53mjrtju.elasticbeanstalk.com/rest/line',    
+            type:'GET', 
+            dataType:'json', 
+            contentType: "application/json; charset=utf-8", 
+            data: {"LineNum":LN,"PositionId":PID},     
+            success:function(data) {    
+                if(data.code == 1 ){  
+
+                    $("#stationList_my").empty();
+
+
+                    $("#car_num_0").text(LN);
+                    $("#car_num_0").text(data.data[1][0].DeviceName);
+                    $("#car_num_1").text(data.data[1][1].DeviceName);
+                    $("#car_num_2").text(data.data[1][2].DeviceName);
+
+                    
+                    $("#car_num_0_station_num").text(data.data[1][0].RemainStops);
+                    $("#car_num_0_min").text(data.data[1][0].RemainTime);
+                    $("#car_num_1_station_num").text(data.data[1][1].RemainStops);
+                    $("#car_num_1_min").text(data.data[1][1].RemainTime);
+                    $("#car_num_2_station_num").text(data.data[1][2].RemainStops);
+                    $("#car_num_2_min").text(data.data[1][2].RemainTime);
+
+                    if(data.data[1][0].RemainStops <= 1){
+                        document.getElementById("car_num_0_coming").style.display="block";
+                        document.getElementById("car_num_0_remain").style.display="none";
+                    }
+
+
+
+                    var scrool_tag = false;
+
+                    for (var i = 0; i < data.data[0].stations.length; i++){
+
+                        if(i == PID){
+
+                            var pas_cc = '<li class="passed_c"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+                            $("#stationList_my").append(pas_cc);
+
+                            continue;
+                        }
+         
+
+
+                        if(0 == hasCar(data.data[0].stations[i].id,data.data[1])){
+                            var pas_r = '<li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+                            $("#stationList_my").append(pas_r);
+                        }else if(1 == hasCar(data.data[0].stations[i].id,data.data[1])){
+
+                            var cur_r = '<li class="current"><div class="stationLine"></div><em class="busIcon"></em><em class="busIconName"">'+hasCarDeviceName(data.data[0].stations[i].id,data.data[1])+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+
+                            
+                            if(!scrool_tag){
+
+                                cur_r = '<li class="current"><div class="stationLine"></div><em class="busIcon"></em><em id="scrool_tag_bus" class="busIconName"">'+hasCarDeviceName(data.data[0].stations[i].id,data.data[1])+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+
+
+                                scrool_tag = true;
+                            }
+
+
+
+
+
+                            
+                            $("#stationList_my").append(cur_r);
+
+                        }else if(2 == hasCar(data.data[0].stations[i].id,data.data[1])){
+                            var cur_m = '<li class="current"><div class="stationLine"></div><em class="busIcon" style="margin-top: 29px;"></em><em class="busIconName"">'+hasCarDeviceName(data.data[0].stations[i].id,data.data[1])+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+
+
+                            if(!scrool_tag){
+                                cur_m = '<li class="current"><div class="stationLine"></div><em class="busIcon" style="margin-top: 29px;"></em><em id="scrool_tag_bus" class="busIconName"">'+hasCarDeviceName(data.data[0].stations[i].id,data.data[1])+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+                                scrool_tag = true;
+                            }
+
+                            
+                            $("#stationList_my").append(cur_m);
+
+                        }else{
+
+                            var two_bus_name = hasCarDeviceName(data.data[0].stations[i].id,data.data[1]);
+
+                            var bus_one = two_bus_name.substring(0,two_bus_name.indexOf("_"));
+                            var bus_two = two_bus_name.substring(two_bus_name.indexOf("_")+1,two_bus_name.length);
+
+
+
+
+                            var cur_m = '<li class="current"><div class="stationLine"></div><em class="busIcon" style="margin-top: 29px;"></em><em class="busIconNameOne">'+bus_one+'</em><em class="busIconNameTwo">'+bus_two+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+
+
+                            if(!scrool_tag){
+                                cur_m = '<li class="current"><div class="stationLine"></div><em class="busIcon" style="margin-top: 29px;"></em><em id="scrool_tag_bus" class="busIconNameOne">'+bus_one+'</em><em class="busIconNameTwo">'+bus_two+'</em><span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+                                scrool_tag = true;
+                            }
+
+                            
+                            $("#stationList_my").append(cur_m);
+
+                        }
+
+                    };
+
+                    var stb = document.getElementById('scrool_tag_bus');
+
+                    var mai=document.getElementById('mainConBig');
+                    mai.scrollTop=stb.parentNode.offsetTop-260;
+
+         
+                }else{    
+                    alert("rest 失败: "+data.description);    
+                }    
+             },    
+             error : function() {    
+                  // view("异常！");    
+                  alert("异常！");    
+             }    
+        });    
+
+}
+
+
+$(function(){
+
+
+
+
+
+
+
+
+    $("#pageBack").on("touchstart, click", function(){
+        window.clearInterval(t_timer);//去掉定时器 
+    document.getElementById("lines_div").style.display="block";
+  document.getElementById("detail_div").style.display="none";
+  document.getElementById("message_div").style.display="none";
+
+  from_tag = 0;
+                    
+});
+
+        $("#pageBack2").on("touchstart, click", function(){
+
+            if(from_tag == 1){
+
+document.getElementById("lines_div").style.display="none";
+  document.getElementById("detail_div").style.display="block";
+  document.getElementById("message_div").style.display="none";
+
+            }else{
+document.getElementById("lines_div").style.display="block";
+  document.getElementById("detail_div").style.display="none";
+  document.getElementById("message_div").style.display="none";
+
+            }
+
+
+
+                    
+});
+
+
+    
+
+
+
+    $("#search_dk_button").on("tap", function(){
+        $.mobile.changePage("detail.html");
+    });
+
+var from_tag = 0;
+
+var PID1 = 17;
+        var LN1  = 29;
+
+        var aj1 = $.ajax( {    
+            url:'http://testiot-sq53mjrtju.elasticbeanstalk.com/rest/line',    
+            type:'GET', 
+            dataType:'json', 
+            contentType: "application/json; charset=utf-8", 
+            data: {"LineNum":LN1,"PositionId":PID1},     
+            success:function(data) {   
+
+   
+        if(data.code == 1 ){  
+
+                // document.getElementById("infoBoxPoint").style.display="none";
+                // document.getElementById("infoBoxPointDetail").style.display="none";
+                // document.getElementById("infoBoxPointMessage").style.display="none";
+
+                var oneline = '<li id="a3" style="cursor: pointer;"><div class="inline" style="width: 50%;margin-left: 0px;"><p class=" ft24 c0"><div    style="height: 25px; font-size: 21px; line-height: 21px;" >'+ data.data[0].lineNum +'</div></p><p class="ft18 c1">' + data.data[0].stations[0].name + '</p><p class="ft15 c2">To  '+data.data[0].stations[data.data[0].stations.length-1].name+' 站</p></div><div class="inline" style="width: 40%;"><p class="ft12 c1"><em class="i_bus"></em>'+data.data[1][0].DeviceName+'</p><p class="ft15 mgl15 c3" style="margin-left: 6px;">即将到站</p></div><div class="inline tr" style="width: 10%;"><div class="busStatus"></div></div></li>';
+
+                $("#busListBoxFav").append(oneline); 
+
+
+                $("#a3").on("click", function() {
+                    document.getElementById("detail_div").style.display="block";
+                    document.getElementById("lines_div").style.display="none";
+
+                    document.getElementById("message_div").style.display="none";
+
+                    from_tag = 1;
+
+                    
+
+                    get_detail_data();
+                    t_timer = self.setInterval("get_detail_data()",5000);
+                    
+
+                });
+
+
+
+                
+                
+                
+
+
+            // view("修改成功！");    
+            //alert("rest 调用成功: "+data.description);    
+            //alert(JSON.stringify(data));  
+        }else{    
+            alert("rest 失败: "+data.description);    
+        }    
+     },    
+     error : function() {    
+          // view("异常！");    
+          alert("异常！");    
+     }    
+});  
+
+t_timer_m = self.setInterval("get_message_loop()",3000);
+
+get_detail_data();
+
+// var aj2 = $.ajax( {    
+//     url:'http://testiot-sq53mjrtju.elasticbeanstalk.com/rest/favorlines',    
+//     type:'GET', 
+//     dataType:'json', 
+//     contentType: "application/json; charset=utf-8",     
+//     success:function(data) {    
+//         if(data.code == 1 ){  
+//             var no_r = '<li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">17</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>';
+//             var cur_r = '<li class="current"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">14</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>';
+//             var pas_r = '<li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">5</span> <em class="point"></em> <span class="stationText">WestBound via Sheppard</span></li>';
+
+//             for (var i = data.data[0].lineInfor.stations.length - 1; i >= 5; i--){
+//                 var no_r = '<li><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].lineInfor.stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].lineInfor.stations[i].name+'</span></li>';
+//                 $("#stationList_my").append(no_r);
+//             };
+
+            
+//                 var cur_r = '<li class="current"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].lineInfor.stations[4].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].lineInfor.stations[4].name+'</span></li>';
+//                 $("#stationList_my").append(cur_r);
+            
+
+//             for (var i = 3; i >= 0; i--){
+//                 var pas_r = '<li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].lineInfor.stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].lineInfor.stations[i].name+'</span></li>';
+//                 $("#stationList_my").append(pas_r);
+//             };
+
+            
+
+//                 // var oneline = '<li><div class="inline" style="width: 50%;margin-left: 0px;"><p class=" ft24 c0"><a  href="./detail.html" rel="external" data-aiax="false">'+ data.data[0].lineInfor.lineNum +'</a></p><p class="ft18 c1">' + data.data[0].lineInfor.stations[0].name + '</p><p class="ft15 c2">To  '+data.data[0].lineInfor.stations[data.data[0].lineInfor.stations.length-1].name+' 站</p></div><div class="inline" style="width: 40%;"><p class="ft12 c1"><em class="i_bus"></em>'+data.data[0].buses[0].DeviceName+'</p><p class="ft15 mgl15 c3">Come Soon</p></div><div class="inline tr" style="width: 10%;"><div class="busStatus"></div></div></li>';
+
+//                 // $("#busListBoxFav").append(oneline); 
+
+                
+
+//             // view("修改成功！");    
+//             //alert("rest 调用成功: "+data.description);    
+//             //alert(JSON.stringify(data));  
+//         }else{    
+//             alert("rest 失败: "+data.description);    
+//         }    
+//      },    
+//      error : function() {    
+//           // view("异常！");    
+//           alert("异常！");    
+//      }    
+// });   
+
+// var aj3 = $.ajax( {    
+//     url:'http://testiot-sq53mjrtju.elasticbeanstalk.com/rest/line',    
+//     type:'GET', 
+//     dataType:'json', 
+//     contentType: "application/json; charset=utf-8", 
+//     data: {"LineNum":"328","PositionId":"5"},     
+//     success:function(data) {    
+//         if(data.code == 1 ){  
+
+//             $("#stationList_my").empty();
+
+//             $("#car_num_0").text(data.data[1][0].DeviceName);
+//             $("#car_num_1").text(data.data[1][1].DeviceName);
+//             $("#car_num_2").text(data.data[1][2].DeviceName);
+
+            
+//             $("#car_num_0_station_num").text(data.data[1][0].RemainStops);
+//             $("#car_num_0_min").text(data.data[1][0].RemainTime);
+//             $("#car_num_1_station_num").text(data.data[1][1].RemainStops);
+//             $("#car_num_1_min").text(data.data[1][1].RemainTime);
+//             $("#car_num_2_station_num").text(data.data[1][2].RemainStops);
+//             $("#car_num_2_min").text(data.data[1][2].RemainTime);
+
+//             if(data.data[1][0].RemainStops <= 2){
+//                 document.getElementById("car_num_0_coming").style.display="block";
+//                 document.getElementById("car_num_0_remain").style.display="none";
+//             }
+
+
+
+            
+
+//             for (var i = ; i >= 0; i--){
+ 
+
+
+//                 if(0 == hasCar(data.data[0].stations[i].id,data.data[1])){
+//                     var pas_r = '<li class="passed"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+//                     $("#stationList_my").append(pas_r);
+//                 }else if(1 == hasCar(data.data[0].stations[i].id,data.data[1])){
+
+//                     var cur_r = '<li class="current"><div class="stationLine"></div><em class="busIcon"></em> <span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+//                     $("#stationList_my").append(cur_r);
+
+//                 }else{
+
+//                     var cur_m = '<li class="current"><div class="stationLine"></div><em class="busIcon" style="margin-top: -29px;"></em> <span class="stationNum">'+data.data[0].stations[i].id+'</span> <em class="point"></em> <span class="stationText">'+data.data[0].stations[i].name+'</span></li>';
+//                     $("#stationList_my").append(cur_m);
+
+//                 }
+
+//             };
+
+ 
+//         }else{    
+//             alert("rest 失败: "+data.description);    
+//         }    
+//      },    
+//      error : function() {    
+//           // view("异常！");    
+//           alert("异常！");    
+//      }    
+// }); 
+
+
+// $.ajax({
+//                 type:"get",
+//                 data:"random="+Math.random(),
+//                 url:'testiot-sq53mjrtju.elasticbeanstalk.com/rest/favorlines',
+//                 dataType:"jsonp",
+//                 jsonp:"callback",
+//                 success:function(data){
+//                      alert(JSON.stringify(data));    
+//                 }
+//             }); 
+
+
+
+var searchInput = $("#searchInput"),
+  searchHolder = $("#searchHolder");
+searchHolder.on("touchstart, click", function() {
+  var _this = $(this);
+   
+  _this.hide();
+  searchInput.get(0).focus();    
+});
+
+searchInput.on("focus", function(){
+  searchHolder.hide();
+});
+
+searchInput.on("blur", function(){
+  var _this = $(this);
+  
+  if(_this.val() !== "") return;
+  
+  searchHolder.show();
+});
+
+var tabBox = $(".tabBox"),
+  tabItems = tabBox.children("div"),
+  tabBodys = $("#busListBox > ul.busList");
+tabBox.delegate(">div", "touchstart, click", function(){
+  var _this = $(this),
+   _index = tabItems.index(_this);
+   
+  if(!_this.hasClass("on")) {
+   _this.addClass("on").siblings("div.on").removeClass("on");
+   tabBodys.hide();
+   $(tabBodys[_index]).show();   
+  }
+  
+});
+
+
+
+$("#infoBox").on("touchstart, click", function(){
+  // $("#alertMask").fadeIn();
+  // $("#alertPop").fadeIn(); 
+
+  from_tag = 0;
+  window.clearInterval(t_timer_m);
+  g_m_NUM= g_m_NUM + 1;
+  document.getElementById("detail_div").style.display="none";
+document.getElementById("lines_div").style.display="none";
+
+document.getElementById("message_div").style.display="block";
+
+  document.getElementById("infoBoxPoint").style.display="none";
+  document.getElementById("infoBoxPointDetail").style.display="none";
+  document.getElementById("infoBoxPointMessage").style.display="none";
+
+});
+
+$("#infoBox1").on("touchstart, click", function(){
+  // $("#alertMask").fadeIn();
+  // $("#alertPop").fadeIn(); 
+  // 
+  from_tag = 1;
+  window.clearInterval(t_timer_m);
+  g_m_NUM= g_m_NUM + 1;
+
+    document.getElementById("detail_div").style.display="none";
+document.getElementById("lines_div").style.display="none";
+
+document.getElementById("message_div").style.display="block";
+
+  document.getElementById("infoBoxPoint").style.display="none";
+  document.getElementById("infoBoxPointDetail").style.display="none";
+  document.getElementById("infoBoxPointMessage").style.display="none";
+});
+
+$("#sureBtn").on("touchstart, click", function(){
+  $("#alertMask").fadeOut();
+  $("#alertPop").fadeOut(); 
+  document.getElementById("infoBoxPoint").style.display="none";
+  document.getElementById("infoBoxPointDetail").style.display="none";
+  document.getElementById("infoBoxPointMessage").style.display="none";
+});
+
+
+}); 
+</script>
+</html>
